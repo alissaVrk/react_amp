@@ -3,7 +3,9 @@ import { render } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const stuff = render(<App />);
+  console.log(stuff.container.innerHTML)
+
+  // const header = stuff.getByText('Amplify Todos');
+  // expect(header).toBeInTheDocument();
 });
