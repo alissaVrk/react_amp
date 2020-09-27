@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/test",
+            "lambdaFunction": "testFunc",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/test"
+        }
+    ],
+    "resourceName": "restApi",
+    "apiName": "restApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "testFunc"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-reactamplified-dev-144054-authRole",
+        "unAuthRoleName": "amplify-reactamplified-dev-144054-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "testFunc",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
