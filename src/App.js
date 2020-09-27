@@ -14,15 +14,22 @@ const App = () => {
   const [formState, setFormState] = useState(initialState)
   const [todos, setTodos] = useState([])
 
+  API.get('restApi', '/test').then(data => {
+    console.log('SSSSS', data)
+  }).catch(err => console.error(err))
+
   useEffect(() => {
     fetchTodos()
   }, [])
+
+  
 
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value })
   }
 
   async function fetchTodos() {
+
     try {
       const todoData = await API.graphql(graphqlOperation(listTodos))
       const todos = todoData.data.listTodos.items
