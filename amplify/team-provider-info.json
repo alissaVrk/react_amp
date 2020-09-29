@@ -36,6 +36,9 @@
         "reactamp": {
           "hostedUIProviderCreds": "[]"
         }
+      },
+      "function": {
+        "testFunc": {}
       }
     }
   }
